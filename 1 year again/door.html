@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ... </title>
+  <link rel="stylesheet" href="door.css">
+  <link rel="icon" type="image/x-icon" href="skull.ico">
+</head>
+<body>
+  <div id="lockerPage" class="page-container">
+    <h2>Click the door to open</h2>
+
+    <div id="lockerContainer" class="locker-container">
+      <img id="lockerImageClosed" src="door.png" alt="Closed Locker" onclick="openLocker()">
+      <img id="lockerImageOpened" src="doorlock.png" alt="Opened Locker" style="display: none;" onclick="showQuestion()">
+    </div>
+
+    <div id="questionContainer" style="display: none;">
+      <p id="questionText">Unlock the locker combination (ur bd year + ur gfs bd year + the year you guys started dating)</p>
+      <input type="text" id="answerInput" placeholder="Enter combination">
+      <button onclick="checkAnswer()">Submit</button>
+      <div id="answerResult"></div>
+    </div>
+
+    <button onclick="goBack()">Go Back</button>
+  </div>
+
+  <script src="door.js"></script>
+</body>
+</html>

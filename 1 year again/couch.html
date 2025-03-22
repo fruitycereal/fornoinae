@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ... </title>
+  <link rel="stylesheet" href="couch.css">
+  <link rel="icon" type="image/x-icon" href="skull.ico">
+</head>
+<body>
+  <div id="couchPage" class="page-container">
+    <h2>Click the couch to search</h2>
+
+    <div id="couchContainer">
+      <img id="couchImage" src="couch1.png" alt="Couch" onclick="searchCouch()">
+    </div>
+
+    <div id="cushionsContainer" style="display: none;">
+      <h3>Click on a cushion to search for clues:</h3>
+      <img id="cushion1" src="cushion1.png" alt="Cushion 1" onclick="checkCushion(false)">
+      <img id="cushion2" src="cushion2.png" alt="Cushion 2" onclick="checkCushion(true)">
+      <div id="cushionResult"></div>
+    </div>
+
+    <div id="questionContainer" style="display: none;">
+      <p id="questionText"></p>
+      <input type="text" id="answerInput" placeholder="Enter your answer">
+      <button onclick="checkAnswer()">Submit</button>
+      <div id="answerResult" class="answerResult"></div>
+    </div>
+
+    <button onclick="goBack()">Go Back</button>
+
+    <script src="couch.js"></script>
+  </div>
+</body>
+</html>

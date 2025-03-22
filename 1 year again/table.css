@@ -1,0 +1,127 @@
+body {
+  background-color: #000000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensures full viewport height */
+  overflow: hidden;
+}
+
+.page-container {
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.table-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#tableImageClosed {
+  width: 35%;
+  transition: transform 0.5s ease;
+  display: block;
+  margin-bottom: 20px; /* Adding margin between the title and image */
+  object-fit: contain; /* Prevents stretching of the image */
+}
+
+#tableImageOpened {
+  width: 45%;
+  transition: transform 0.5s ease;
+  display: none;
+  margin-top: 20px; /* Adjust spacing between the images */
+  object-fit: contain; /* Ensures proper scaling */
+}
+
+#questionContainer {
+  margin-top: 20px;
+}
+
+#answerInput {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+  max-width: 400px; /* Prevent input from getting too wide */
+}
+
+#answerResult {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ff0000;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px; /* Set a max-width for buttons to prevent them from getting too wide */
+  border-radius: 5px; /* Rounded button corners */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+input {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  font-size: 16px;
+  max-width: 400px; /* Prevent input from stretching too much */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  #tableImageClosed {
+      width: 50%; /* Makes the image larger on smaller screens */
+  }
+  
+  #tableImageOpened {
+      width: 60%; /* Adjusts the opened image size */
+  }
+  
+  #answerInput {
+      width: 90%; /* Makes the input take up more space on smaller screens */
+  }
+  
+  button {
+      width: 90%; /* Makes the button take up more space on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #tableImageClosed {
+      width: 70%; /* Makes the image larger on very small screens */
+  }
+
+  #tableImageOpened {
+      width: 80%; /* Increases the opened image size */
+  }
+  
+  #answerInput {
+      width: 95%; /* Makes input almost full width */
+  }
+
+  button {
+      width: 95%; /* Makes the button almost full width */
+  }
+}

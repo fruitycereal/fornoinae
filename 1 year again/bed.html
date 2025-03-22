@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ... </title>
+    <link rel="stylesheet" href="bed.css">
+    <link rel="icon" type="image/x-icon" href="skull.ico">
+</head>
+<body>
+    <div id="bedPage" class="page-container">
+        <h2>Click the bed to search</h2>
+
+        <div id="bedContainer">
+            <img id="bedImage" src="bed.png" alt="Bed" onclick="searchBed()">
+        </div>
+
+        <div id="searchResults" style="display: none;">
+            <h3>You found three things, which one would you like to check out first?</h3>
+            <button onclick="showItem('pic')"> First </button>
+            <button onclick="showItem('rat')"> Second </button>
+            <button onclick="showItem('passcode')"> Third </button>
+        </div>
+
+        <div id="picPopup" class="popuppig" style="display: none;">
+            <p> you found a pic of yourself! </p><br>
+            <img src="pic.png" alt="Your Picture">
+            <button onclick="closePopup('picPopup')">Close</button>
+        </div>
+
+        <div id="ratPopup" class="popup" style="display: none;">
+            <p> you found a rat that looks fake (it's probably dead) </p><br>
+            <img src="rat.png" alt="Dead Rat">
+            <button onclick="closePopup('ratPopup')">Close</button>
+        </div>
+
+        <div id="passcodePopup" class="popup" style="display: none;">
+            <p> yay you found the passcode! </p><br>
+            <img src="paper.png" alt="Passcode">
+            <button onclick="closePopup('passcodePopup')">Close</button>
+        </div>
+
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script src="bed.js"></script>
+</body>
+</html>

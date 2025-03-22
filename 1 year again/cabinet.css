@@ -1,0 +1,109 @@
+body {
+    background-color: #000000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .page-container {
+    padding: 20px;
+  }
+  
+  .cabinet-container {
+    position: relative; /* Make this container the reference for absolute positioning of the circles */
+    display: inline-block; /* Keeps the image and circles aligned properly */
+    cursor: pointer;
+  }
+  
+  #cabinetImage {
+    margin-top: 25px;
+    width: 47%;
+    transition: transform 0.5s ease;
+  }
+  
+  .clue-message {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .circles-container {
+    position: absolute; /* Position circles on top of the cabinet image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    pointer-events: auto; /* Allow the container to respond to clicks */
+  }
+  
+  .circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    position: absolute; /* Absolutely position circles within the cabinet container */
+    opacity: 0.6;
+  }
+  
+  #circle1 {
+    top: 37%;
+    left: 28%;
+  }
+  
+  #circle2 {
+    top: 50%;
+    left: 60%;
+  }
+  
+  #circle3 {
+    top: 75%;
+    left: 38%;
+  }
+  
+  .circle:hover {
+    background-color: #f0f0f0;
+  }
+  
+  #questionContainer {
+    margin-top: 20px;
+  }
+  
+  #answerInput {
+    margin-top: 10px;
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+  }
+  
+  #answerResult {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ff0000;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #777;
+  }
+  
+  input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+  }

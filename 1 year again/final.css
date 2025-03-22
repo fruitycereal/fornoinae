@@ -1,0 +1,177 @@
+/* General body and text styling */
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    /*overflow: hidden;*/
+}
+
+#introText {
+    font-size: 2em;
+    color: white;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Otter Container and Image */
+
+
+#otter1Container {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;  /* Reduced space from top */
+    margin-left: 10%;  /* Bring otter closer to center */
+}
+
+#otter1Image {
+    width: 500px; /* Increased width for slightly bigger otter */
+    opacity: 0;
+    height: auto;
+    transition: opacity 1s ease;
+}
+
+#otter1Text {
+    font-size: 1.5em;
+    color: white;
+    opacity: 0;
+    text-align: left;
+    margin-left: 10px;  /* Reduced space between text and image */
+    align-self: flex-start;
+    padding-top: 20px;
+}
+
+
+
+
+/* ... your existing CSS ... */
+
+#otter1Container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Add this line */
+}
+
+#otter1Image {
+    width: 500px;
+    opacity: 0;
+    height: auto;
+    transition: opacity 1s ease-in-out;
+}
+
+#otterContainer {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 10%;
+}
+
+#otterImage {
+    width: 200px;
+    opacity: 1;
+    height: auto;
+}
+
+#otterText {
+    font-size: 1.5em;
+    color: white;
+    opacity: 1;
+    text-align: left;
+    margin-left: 10px;
+    align-self: flex-start;
+    padding-left: 20px;
+    padding-top: 50px;
+}
+
+/* ... your existing CSS ... */
+
+
+
+#questionText p {
+    font-size: 28px;
+}
+
+.textbox {
+    margin: 20px auto; /* Changed margin-top to margin to include auto */
+    display: block; /* changed inline-block to block */
+    background-color: black;
+    padding: 10px;
+    border: 2px solid white;
+    width: 800px;
+}
+
+textarea {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 400px;
+    height: 100px;
+    resize: none;
+    font-size: 1.2em;
+    padding: 10px;
+    display: block; /* Make it a block-level element */
+    margin: 0 auto; /* Center horizontally */
+    text-align: center;
+}
+
+#choicesContainer button {
+    margin: 10px;
+    padding: 15px 30px; /* Increase padding */
+    font-size: 1.2em; /* Increase font size */
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#choicesContainer button:hover {
+    background-color: #555;
+}
+
+.red-text {
+    font-size: 1.5em;
+    color: red;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#questionText {
+    font-size: 1.8em;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#endGameButton button {
+    margin-top: 30px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#endGameButton button:hover {
+    background-color: #cc0000;
+}

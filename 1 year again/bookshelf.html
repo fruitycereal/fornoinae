@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ... </title>
+  <link rel="stylesheet" href="bookshelf.css">
+  <link rel="icon" type="image/x-icon" href="skull.ico">
+</head>
+<body>
+  <div id="bookshelfPage" class="page-container">
+    <h2>Click the bookshelf to zoom in</h2>
+
+    <div id="bookshelfContainer" class="bookshelf-container">
+
+      <img id="bookshelfImageClosed" src="bookshelf.jpg" alt="Bookshelf" onclick="openBookshelf()">
+      <img id="bookshelfImageOpened" src="bookzoom.jpg" alt="Bookshelf Zoomed" style="display:none;">
+
+      <div id="booksContainer" class="books-container" style="display:none;">
+        <div class="book" id="book1" onclick="openBook(1)"></div>
+        <div class="book" id="book2" onclick="openBook(2)"></div>
+        <div class="book" id="book3" onclick="openBook(3)"></div>
+        <div class="book" id="book4" onclick="openBook(4)"></div>
+        <div class="book" id="book5" onclick="openBook(5)"></div>
+        <div class="book" id="book6" onclick="openBook(6)"></div>
+        <div class="book" id="book7" onclick="openBook(7)"></div>
+        <div class="book" id="book8" onclick="openBook(8)"></div>
+        <div class="book" id="book9" onclick="openBook(9)"></div>
+      </div>
+    </div>
+
+    <div id="clueMessage" class="clue-message"></div>
+
+    <div id="questionContainer" style="display:none;">
+      <p id="questionText">I am easy to lift, but hard to throw. What am I?</p>
+      <input type="text" id="answerInput" placeholder="Type your answer here">
+      <button onclick="checkAnswer()">Submit</button>
+      <div id="answerResult" class="answer-result"></div>
+    </div>
+
+    <div id="resultMessage" class="result-message"></div>
+    <button onclick="goBack()">Go Back</button>
+  </div>
+
+  <script src="bookshelf.js"></script>
+</body>
+</html>

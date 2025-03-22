@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ... </title>
+  <link rel="stylesheet" href="cabinet.css">
+  <link rel="icon" type="image/x-icon" href="skull.ico">
+</head>
+<body>
+  <div id="cabinetPage" class="page-container">
+    <h2>Click the cabinet to open</h2>
+    
+    <div id="cabinetContainer" class="cabinet-container">
+      <img id="cabinetImage" src="closed-cabinet.jpg" alt="Cabinet" onclick="openCabinet()">
+      
+      <div id="circlesContainer" class="circles-container" style="display:none;">
+        <div class="circle" id="circle1" onclick="openClue(1)"></div>
+        <div class="circle" id="circle2" onclick="openClue(2)"></div>
+        <div class="circle" id="circle3" onclick="openClue(3)"></div>
+      </div>
+    </div>
+    
+    <div id="clueMessage" class="clue-message"></div>
+    
+    <div id="questionContainer" style="display:none;">
+      <p id="questionText">I am easy to lift, but hard to throw. What am I?</p>
+      <input type="text" id="answerInput" placeholder="Type your answer here">
+      <button onclick="checkAnswer()">Submit</button>
+      <div id="answerResult"></div>
+    </div>
+    
+    <div id="resultMessage" class="result-message"></div>
+    <button onclick="goBack()">Go Back</button>
+  </div>
+
+  <script src="cabinet.js"></script>
+</body>
+</html>

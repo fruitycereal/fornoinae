@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ... </title>
+    <link rel="stylesheet" href="final.css">
+    <link rel="icon" type="image/x-icon" href="skull.ico">
+</head>
+<body>
+    <audio autoplay loop src="chase.mp3"></audio>
+
+    <div id="introTextContainer">
+        <div id="introText" class="intro-text"></div>
+    </div>
+
+    <div id="otter1Container" style="display:none;">
+        <img id="otter1Image" src="otter.png" alt="Otter" />
+    </div>
+
+    <div id="otterContainer" style="display:none;">
+        <img id="otterImage" src="otter.png" alt="Otter" />
+        <p id="otterText"></p>
+    </div>
+
+    <div id="userTextbox" class="textbox" style="display:none;">
+        <textarea id="userInput"></textarea>
+    </div>
+
+    <div id="questionText" style="display:none;">
+        <p>What do you say to her?</p>
+    </div>
+
+    <div id="choicesContainer" style="display:none;">
+        <button id="hateChoice" onclick="chooseIhateYou()">I hate you</button>
+        <button id="whyChoice" onclick="chooseWhy()">Why?</button>
+        <button id="sorryChoice" onclick="chooseSorry()">Sorry</button>
+        <button id="loveChoice" onclick="chooseILoveYou()">I love you</button>
+    </div>
+
+    <div id="resultText" class="red-text" style="display:none;"></div>
+
+    <div id="endGameButton" style="display:none;">
+        <button onclick="endGame()">END GAME</button>
+    </div>
+
+    <script src="final.js"></script>
+</body>
+</html>

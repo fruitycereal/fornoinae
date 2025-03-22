@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ... </title>
+  <link rel="stylesheet" href="table.css">
+  <link rel="icon" type="image/x-icon" href="skull.ico">
+</head>
+<body>
+  <div id="tablePage" class="page-container">
+    <h2>Click the table to search</h2>
+
+    <div id="tableContainer" class="table-container">
+      <img id="tableImageClosed" src="table.png" alt="Closed Table" onclick="openTable()">
+      <img id="tableImageOpened" src="otter.jpeg" alt="Opened Table" style="display: none;">
+    </div>
+
+    <div id="questionContainer" style="display: none;">
+      <p id="questionText">How many differences are there?</p>
+      <input type="text" id="answerInput" placeholder="Enter answer">
+      <button onclick="checkAnswer()">Submit</button>
+      <div id="answerResult"></div>
+    </div>
+
+    <button onclick="goBack()">Go Back</button>
+  </div>
+
+  <script src="table.js"></script>
+</body>
+</html>

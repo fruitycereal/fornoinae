@@ -1,0 +1,68 @@
+/* General page styling */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fullscreen black screen */
+.black-screen {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Intro text (Don't forget any clues) with fade-in/out animation */
+.intro-text {
+  font-size: 40px;
+  max-width: 80%;
+  text-align: center;
+  opacity: 0; /* Initial opacity */
+  transition: opacity 1s ease-in-out;
+}
+
+/* Wake-up message that appears after intro fades out */
+.wake-up-message {
+  font-size: 40px;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Room start screen text styling */
+.room-start {
+  font-size: 30px;
+  text-align: center;
+  transition: opacity 1s ease-in-out;
+  padding: 40px;
+  opacity: 0; /* Initial opacity for fade-in */
+  display: none; /* Initially hidden */
+}
+
+/* "Press to continue" text styling */
+.press-to-continue {
+  margin-top: 30px; /* Reduced margin */
+  opacity: 0.6;
+  font-size: 18px;
+  text-align: center;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.press-to-continue:hover {
+  opacity: 1;
+}

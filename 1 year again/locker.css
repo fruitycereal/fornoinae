@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+  background-color: #000000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh; /* Ensures full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Page Container */
+.page-container {
+  padding: 20px;
+  width: 100%;
+  max-width: 800px; /* To limit the width of the page */
+  box-sizing: border-box;
+}
+
+/* Locker Container */
+.locker-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Locker Images */
+#lockerImageClosed, #lockerImageOpened {
+  width: 40%; /* Makes the images responsive */
+  max-width: 250px; /* Limits the maximum size of the images */
+  transition: transform 0.5s ease;
+  margin-bottom: 20px; /* Adds margin between images and text */
+}
+
+/* Question Container */
+#questionContainer {
+  margin-top: 20px;
+  display: none;
+}
+
+/* Answer Input */
+#answerInput {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  max-width: 350px; /* Limits the input width */
+  font-size: 16px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensures padding doesn't stretch the width */
+}
+
+/* Answer Result */
+#answerResult {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ff0000;
+}
+
+/* Button Styling */
+button {
+  margin-top: 20px;
+  width: 150px;
+  padding: 15px 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;/* Returns button to default size */
+  max-width: 350px; /* Limits the button width */
+  display: inline-block; /* Ensures button doesn't stretch out */
+}
+
+button:hover {
+  background-color: #777;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  #lockerImageClosed, #lockerImageOpened {
+    width: 70%; /* Adjust image width for mobile */
+  }
+
+  #answerInput, button {
+    width: 80%; /* Adjust input and button for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  #lockerImageClosed, #lockerImageOpened {
+    width: 80%; /* Adjust image width for smaller screens */
+  }
+
+  #answerInput, button {
+    width: 90%; /* Adjust input and button width for small screens */
+  }
+}
