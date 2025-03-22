@@ -10,7 +10,11 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <audio autoplay loop src="noone.mp3"></audio>
+    <!-- Audio element -->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="noone.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
     <div id="overlay" class="overlay hidden"></div>
 
@@ -55,28 +59,57 @@
         </div>
     </div>
 
+    <script src = "letter.js"></script>
+
+    <script>
+        // Play the audio when the page is loaded (for sure)
+        const audio = document.getElementById("backgroundMusic");
+        audio.play(); // Explicitly play the audio in case autoplay does not trigger
+
+        function hearts(){
+            const container = document.querySelector('.container');
+                
+            const creat = document.createElement('div');
+            creat.classList.add('hearts');
+            creat.innerHTML = '💗';
+
+            creat.style.left = Math.random() * 100 + 'vw';
+            creat.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+            container.appendChild(creat);
+            setTimeout(() => {
+                creat.remove();
+            }, 3000);
+        }
+        
+        setInterval(hearts, 100);
+
+        // Envelope click event handling
+        const envelope = document.querySelector('.envelope-wrapper');
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('closePopup');
+        const overlay = document.getElementById('overlay');
+        let isEnvelopeOpened = false; // Track if the envelope is opened
+
+        envelope.addEventListener('click', () => {
+            if (!isEnvelopeOpened) {
+                // First click: open the envelope
+                envelope.classList.add('flap');
+                isEnvelopeOpened = true;
+            } else {
+                // Second click: show the popup
+                popup.classList.remove('hidden');
+                popup.classList.add('visible');
+                overlay.classList.add('visible'); // Show overlay
+            }
+        });
+
+        // Close the popup when the close button is clicked
+        closePopup.addEventListener('click', () => {
+            popup.classList.remove('visible');
+            popup.classList.add('hidden');
+            overlay.classList.remove('visible'); // Hide overlay
+        });
+    </script>
 </body>
-<script src = "letter.js"></script>
-
-<script>
-    function hearts(){
-        
-    const container = document.querySelector('.container');
-        
-    const creat = document.createElement('div');
-    creat.classList.add('hearts');
-    creat.innerHTML = '💗';
-
-    creat.style.left = Math.random() * 100 + 'vw';
-    creat.style.animationDuration = Math.random() * 3 + 2 + 's';
-
-    container.appendChild(creat)
-    setTimeout(() => {
-        creat.remove();
-    }, 3000);
-    }
-    
-    setInterval(hearts, 100);
-</script>
-
 </html>
