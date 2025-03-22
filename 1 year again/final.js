@@ -24,6 +24,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("userInput").disabled = true;
 
+    const bgMusic = document.getElementById("bgMusic");
+    bgMusic.volume = 0;
+    bgMusic.play();
+
+    const fadeIn = setInterval(() => {
+    if (bgMusic.volume < 1) {
+        bgMusic.volume += 0.05;
+    } else {
+        clearInterval(fadeIn);
+    }
+    }, 200);
+
+
     let currentIndex = 0;
 
     function fadeTextInAndOut(text) {

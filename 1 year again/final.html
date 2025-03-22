@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="skull.ico">
 </head>
 <body>
-    <audio autoplay loop src="chase.mp3"></audio>
+    <audio id="bgMusic" autoplay loop src="chase.mp3"></audio>
 
     <div id="introTextContainer">
         <div id="introText" class="intro-text"></div>
@@ -39,6 +39,7 @@
     </div>
 
     <div id="resultText" class="red-text" style="display:none;"></div>
+    
 
     <div id="endGameButton" style="display:none;">
         <button onclick="endGame()">END GAME</button>

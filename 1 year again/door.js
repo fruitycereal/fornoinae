@@ -32,6 +32,15 @@
       gameProgress.lockerOpened = true;
       saveProgress();
   }
+
+  function continueNext() {
+    document.body.style.transition = "opacity 1s";
+    document.body.style.opacity = 0;
+    setTimeout(() => {
+        window.location.href = "final.html";
+    }, 1000);
+}
+
   
   function showQuestion() {
       if (clueFound) return;
