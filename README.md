@@ -1,2 +1,2 @@
-# fornoinae.github.io
+# fornoinae
 obv for my gf
